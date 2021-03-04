@@ -1,0 +1,15 @@
+version: "3"
+services:
+  node:
+    build: 
+      context: ./docker/node
+      dockerfile: Dockerfile_node
+    tty: true
+    volumes:
+      - .:/usr/src/app
+      # - .bash_history:/home/node/.bash_history
+      # - .aws:/home/node/.aws
+    ports:
+      - "3000:3000"
+    user: node
+    command: sh -c "cd redux_todo && yarn start"
