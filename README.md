@@ -15,7 +15,7 @@
 -->
 2.5.
     docker-compose run --rm node sh -c "cd redux_todo && yarn add express mongoose body-parser"
-    docker-compose run --rm node sh -c "cd redux_todo && yarn add nodemon && npx nodemon server.js"
+    docker-compose run --rm node sh -c "cd redux_todo && yarn global add nodemon && npx nodemon server.js"
 
 3.
     docker-compose up -d
