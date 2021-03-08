@@ -14,8 +14,13 @@
     docker-compose run --rm node sh -c "npm install -g create-react-app && npx create-react-app ." こちらでは権限関係でエラーが発生
 -->
 2.5.
-    docker-compose run --rm node sh -c "cd redux_todo && yarn add express mongoose body-parser"
-    docker-compose run --rm node sh -c "cd redux_todo && yarn global add nodemon && npx nodemon server.js"
+    docker-compose run --rm node sh -c "cd redux_todo && yarn add react-redux redux-thunk express mongoose body-parser && yarn global add nodemon"
+
+    docker-compose exec node bash
+
+    コンテナ内部で
+
+    npx nodemon redux_todo/server.js
 
 3.
     docker-compose up -d
