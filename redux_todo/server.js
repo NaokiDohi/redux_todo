@@ -39,7 +39,14 @@ app.post('/api/todo', (req, res) => {
             res.send(err)
         }
 
-        res.json(record)
+        // res.json(record) // これはシンプルなので下記に変更
+        Todo.find({}, (err, todos) => {
+            if(err) {
+                res.send(err)
+            }
+    
+            res.json(todos)
+        })
     })
 })
 
