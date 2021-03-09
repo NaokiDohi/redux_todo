@@ -4,16 +4,22 @@ const initialState = {
 
 const todos = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_TODO':
+        // case 'ADD_TODO':
+        //     return {
+        //         // ...state,
+        //         data: [
+        //             ...state.data,
+        //             {
+        //                 id: action.id,
+        //                 text: action.text,
+        //             }
+        //         ]
+        //     }
+        case 'RECIEVE_TODOS':
             return {
                 // ...state,
-                data: [
-                    ...state.data,
-                    {
-                        id: action.id,
-                        text: action.text,
-                    }
-                ]
+                // data: [...state.data, action.todos]
+                data: action.todos
             }
         case 'DELETE_TODO':
             const todos = state.data.filter(todo => todo.id !== action.id)
