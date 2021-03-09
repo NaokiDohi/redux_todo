@@ -1,6 +1,8 @@
 # Redux_todo
+React, Redux, Redux-thunk, Express, MongoDBによる非同期Todoのサンプルです。PUTメソッド及びDELETEメソッドは作成しておりません。
+sync版はgit checkout 0c09b59で実行可能(コミットID:0c09b59 コミット名:Create Todo App)
 
-実行には下記コマンドを実行
+Dockerによる仮想環境構築には下記コマンドを実行
 
 1.
     docker-compose build
